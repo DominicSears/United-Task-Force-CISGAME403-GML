@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player_pistols</sprite>
+    <sprite>sprites\spr_block</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test1</background>
@@ -15,6 +16,9 @@
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
+    </objects>
+    <objects name="Obstacles">
+      <object>objects\obj_block</object>
     </objects>
   </objects>
   <rooms name="rooms">
