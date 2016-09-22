@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Hello
-// Gravity
+            <string>// Gravity
 if place_free(x,y+1) { gravity = 0.5; }
 else { gravity = 0; }
 gravity_direction = 270;
