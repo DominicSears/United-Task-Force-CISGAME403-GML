@@ -40,6 +40,7 @@ if keyboard_check(ord("D")) || (gamepad_axis_value(0,gp_axislh) &gt; 0) {if plac
 if keyboard_check(ord("A")) || (gamepad_axis_value(0,gp_axislh) &lt; 0) image_index = 1;
 if keyboard_check(ord("D")) || (gamepad_axis_value(0,gp_axislh) &gt; 0) image_index = 0;
 //sup 
+// Sup @Reconcorps51
 // Reset Room
 if (keyboard_check(ord("R")))
     room_restart();
