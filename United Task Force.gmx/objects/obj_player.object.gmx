@@ -25,23 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_free(x,y+1)
-{
-    gravity = 0.5;
-}
-
-else
-{
-    gravity = 0;
-}
-
+            <string>// Gravity
+if place_free(x,y+1) { gravity = 0.5; }
+else { gravity = 0; }
 gravity_direction = 270;
 
 // Jumping Inputs
-if (keyboard_check(vk_space) &amp;&amp; !place_free(x,y+1))
-{
-    vspeed -=14.5;
-}
+if (keyboard_check(vk_space) &amp;&amp; !place_free(x,y+1)){ vspeed -=14.5; }
 
 // Movement Inputs
 if keyboard_check(ord("S")) {if place_free (x,y+4.5) {y+=4.5}}
@@ -54,6 +44,9 @@ if keyboard_check(ord("D")) || (gamepad_axis_value(0,gp_axislh) &gt; 0) image_in
 if (keyboard_check(ord("R")))
     room_restart();
     
+// Staying within frame (Left and right side of map)
+x=min(x,room_width-75);
+x=max(x,75);
 
 </string>
           </argument>
