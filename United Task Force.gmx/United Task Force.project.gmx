@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player_pistols</sprite>
     <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\spr_enemey1</sprite>
+    <sprite>sprites\spr_bullet1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test1</background>
@@ -16,9 +18,15 @@
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <objects name="Enemies">
+        <object>objects\obj_enemy1</object>
+      </objects>
     </objects>
     <objects name="Obstacles">
       <object>objects\obj_block</object>
+    </objects>
+    <objects name="Bullets">
+      <object>objects\obj_bullet</object>
     </objects>
   </objects>
   <rooms name="rooms">
