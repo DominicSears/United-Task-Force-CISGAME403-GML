@@ -69,7 +69,7 @@ bullet.speed = 15;
 }
 
 // Jumping Inputs
-if (keyboard_check(vk_shift) &amp;&amp; !place_free(x,y+1)){ vspeed -=14.5; }
+if (keyboard_check(vk_space) &amp;&amp; !place_free(x,y+1)){ vspeed -=14.5; }
 
 // Movement Inputs
 if keyboard_check(ord("S")) {if place_free (x,y+4.5) {y+=4.5}}
