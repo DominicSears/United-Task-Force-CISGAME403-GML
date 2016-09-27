@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>image_index = 0;
 image_speed = 0;
+
+p_health = 200;
 </string>
           </argument>
         </arguments>
@@ -55,9 +57,9 @@ else { gravity = 0; }
 gravity_direction = 270;
 
 // Gun Inputs
-if (keyboard_check(ord("C")))
+if (keyboard_check_pressed(ord("E")))
 {
-bullet = instance_create(x,y,obj_bullet);
+bullet = instance_create(x+20,y-44,obj_bullet);
 bullet.direction = image_angle;
 bullet.image_angle = image_angle;
 bullet.speed = 15;
