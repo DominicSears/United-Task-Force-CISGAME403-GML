@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>// Enemy Health
 e_health = 100;
+
+// Calculates how many enemies killed
+e_killed = 0;
 </string>
           </argument>
         </arguments>
@@ -55,7 +58,11 @@ else { gravity = 0; }
 gravity_direction = 270;
 
 // Enemy Death
-if (e_health &lt;= 0){ instance_destroy(); }
+if (e_health &lt;= 0)
+{
+    obj_player.e_kills += 1; 
+    instance_destroy(); 
+}
 
 </string>
           </argument>

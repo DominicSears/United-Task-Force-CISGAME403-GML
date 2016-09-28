@@ -15,6 +15,7 @@
     <background>background\bg_test1</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
@@ -28,6 +29,7 @@
     <objects name="Bullets">
       <object>objects\obj_bullet</object>
     </objects>
+    <object>objects\spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
