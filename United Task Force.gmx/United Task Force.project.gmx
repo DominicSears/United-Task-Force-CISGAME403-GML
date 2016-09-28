@@ -9,6 +9,7 @@
     <sprite>sprites\spr_player_pistols</sprite>
     <sprite>sprites\spr_enemy3</sprite>
     <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\AI1</sprite>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_enemey1</sprite>
     <sprite>sprites\spr_bullet1</sprite>
