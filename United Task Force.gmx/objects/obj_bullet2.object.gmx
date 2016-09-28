@@ -58,6 +58,10 @@
             <string>// Damage on obj_enemy1
 obj_player.p_health -= 25;
 hit = instance_place(x,y,obj_player);
+if (hit != noone)
+{
+    
+}
 instance_destroy();
 </string>
           </argument>
