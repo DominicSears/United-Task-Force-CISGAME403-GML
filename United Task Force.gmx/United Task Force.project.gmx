@@ -30,6 +30,7 @@
     <objects name="Entities">
       <object>objects\obj_player</object>
       <objects name="Enemies">
+        <object>objects\obj_enemy2</object>
         <object>objects\obj_enemy1</object>
       </objects>
     </objects>
@@ -42,7 +43,6 @@
     <object>objects\spawner</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
