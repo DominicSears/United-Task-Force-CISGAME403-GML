@@ -17,6 +17,7 @@
     <sprite>sprites\AI1</sprite>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_enemey1</sprite>
+    <sprite>sprites\spr_bullet2</sprite>
     <sprite>sprites\spr_bullet1</sprite>
   </sprites>
   <backgrounds name="background">
@@ -34,7 +35,7 @@
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
-      <object>objects\object6</object>
+      <object>objects\obj_ai</object>
       <objects name="Enemies">
         <object>objects\obj_enemy2</object>
         <object>objects\obj_enemy1</object>
@@ -45,11 +46,14 @@
     </objects>
     <objects name="Bullets">
       <object>objects\obj_bullet</object>
+      <object>objects\obj_bullet2</object>
     </objects>
     <object>objects\spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
+    <room>rooms\training_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
