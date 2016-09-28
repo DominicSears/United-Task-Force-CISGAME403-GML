@@ -7,15 +7,24 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player_pistols</sprite>
+    <sprite>sprites\spr_enemy3</sprite>
+    <sprite>sprites\spr_enemy2</sprite>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_enemey1</sprite>
     <sprite>sprites\spr_bullet1</sprite>
   </sprites>
   <backgrounds name="background">
+    <background>background\military_base</background>
+    <background>background\background8</background>
+    <background>background\bg_test7</background>
+    <background>background\bg_test6</background>
+    <background>background\bg_test5</background>
+    <background>background\bg_test4</background>
+    <background>background\bg_test3</background>
+    <background>background\bg_test2</background>
     <background>background\bg_test1</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
@@ -32,6 +41,7 @@
     <object>objects\spawner</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
