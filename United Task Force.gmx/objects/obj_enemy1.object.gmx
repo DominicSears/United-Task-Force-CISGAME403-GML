@@ -25,11 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Enemy Health
+            <string>state = e_state.idle;
+vsp = 0;
+hsp = 0;
+// Enemy Health
 e_health = 100;
 
 // Calculates how many enemies killed
 e_killed = 0;
+
+cooldown=0; 
+coolmax=30; //30 is one second by default or 30 steps in the game 
+coolrange=300; //meaning that it can shoot you when you are 300 units of pixels away
 </string>
           </argument>
         </arguments>
@@ -62,6 +69,33 @@ if (e_health &lt;= 0)
 {
     obj_player.e_kills += 1; 
     instance_destroy(); 
+}
+
+cooldown-=1; 
+if(distance_to_object(player) &lt;= coolrange); 
+if(cooldown&lt;=0){ 
+cooldown = coolmax 
+dir = point_direction(x,y,player.x,player.y); 
+i = instance_create(x,y,obj_Bullet); 
+i.direction = dir 
+}; 
+
+
+switch (state)
+{
+    case e_state.idle:
+    {
+        hsp = 0;
+        vsp = (min(7,vsp+0.05));
+        if (distance_to_object(obj_player) &lt; 96) state = e_state.chase;
+    }
+    case e_state.chase:
+    {
+        dir = sign(obj_player.x - s);
+        hsp = dir * 2;
+        vsp = (min(7,vsp+0.05));
+        if (distance_to_object(obj_player) &gt; 120) state = e_state.idle;
+    }
 }
 
 </string>

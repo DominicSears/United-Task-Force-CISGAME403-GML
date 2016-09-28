@@ -4,11 +4,16 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound1</sound>
+    <sound>sound\war_sound</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player_pistols</sprite>
     <sprite>sprites\spr_enemy3</sprite>
     <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\sprite8</sprite>
+    <sprite>sprites\sprite7</sprite>
     <sprite>sprites\AI1</sprite>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_enemey1</sprite>
@@ -29,6 +34,7 @@
   <objects name="objects">
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\object6</object>
       <objects name="Enemies">
         <object>objects\obj_enemy2</object>
         <object>objects\obj_enemy1</object>

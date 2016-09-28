@@ -8,6 +8,40 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>state = e_state.idle;
+vsp = 0;
+hsp = 0;
+// Enemy Health
+e_health = 100;
+
+// Calculates how many enemies killed
+e_killed = 0;
+
+cooldown=0; 
+coolmax=30; //30 is one second by default or 30 steps in the game 
+coolrange=300; //meaning that it can shoot you when you are 300 units of pixels away 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -36,6 +70,58 @@ if (e_health &lt;= 0)
     obj_player.e_kills += 1; 
     instance_destroy(); 
 }
+
+cooldown-=1; 
+if(distance_to_object(player)&lt;=coolrange); 
+if(cooldown&lt;=0){ 
+cooldown = coolmax 
+dir = point_direction(x,y,player.x,player.y); 
+i = instance_create(x,y,obj_Bullet); 
+i.direction = dir 
+}; 
+
+
+switch (state)
+{
+    case e_state.idle:
+    }
+        hsp = 0;
+        vsp = (min(7,vsp+0.05));
+        if (distance_to_object(obj_player) &lt; 96) state = e_state.chase;
+
+    break;
+    case e_state.chase:
+    {
+        dir = sign(obj_player.x - s);
+        hsp = dir * 2;
+        vsp = (min(7,vsp+0.05));
+        if (distance_to_object(obj_player) &gt; 120) state = e_state.idle;
+    }
+    break;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_block">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if vspeed &gt; 0 &amp;&amp; !place_free(x,y+vspeed) {move_contact (270)} vspeed = 0;
 </string>
           </argument>
         </arguments>
